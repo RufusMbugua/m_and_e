@@ -2,7 +2,8 @@
     "name": "bushidocode/skills-matrix",
     "description": "Based on the Survey Framework",
     "require": {
-        "doctrine/orm": "~2.5"
+        "doctrine/orm": "~2.5",
+        "phpoffice/phpexcel": "~1.8"
     },
     "authors": [
         {

@@ -26,12 +26,6 @@ class Front extends CI_Controller {
 
    public function index()
     {
-        echo "<pre>";
-        // print_r($this->doctrine->em);
-            //the line above Prints the EntityManager created by Doctrine Library
-            //with this line -> $this->em = EntityManager::create($connectionOptions, $config);
-            echo "</pre>";
-
-        // $this->load->view('welcome_message');
+  
     }
 }
