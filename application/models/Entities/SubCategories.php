@@ -2,25 +2,42 @@
 
 namespace models\Entities;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * SubCategories
+ *
+ * @Table(name="sub_categories", indexes={@Index(name="sub_cat_idx", columns={"category_id"})})
+ * @Entity
  */
 class SubCategories
 {
     /**
      * @var integer
+     *
+     * @Column(name="id", type="integer", nullable=false)
+     * @Id
+     * @GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
      * @var string
+     *
+     * @Column(name="name", type="string", length=45, nullable=true)
      */
     private $name;
 
     /**
-     * @var \models\Entities\Categories
+     * @var \Categories
+     *
+     * @ManyToOne(targetEntity="Categories")
+     * @JoinColumns({
+     *   @JoinColumn(name="category_id", referencedColumnName="id")
+     * })
      */
     private $category;
+
 
 
     /**
@@ -60,11 +77,11 @@ class SubCategories
     /**
      * Set category
      *
-     * @param \models\Entities\Categories $category
+     * @param \Categories $category
      *
      * @return SubCategories
      */
-    public function setCategory(\models\Entities\Categories $category = null)
+    public function setCategory(\Categories $category = null)
     {
         $this->category = $category;
 
@@ -74,7 +91,7 @@ class SubCategories
     /**
      * Get category
      *
-     * @return \models\Entities\Categories
+     * @return \Categories
      */
     public function getCategory()
     {

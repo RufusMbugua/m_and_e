@@ -2,8 +2,7 @@
 use Doctrine\Common\ClassLoader,
 Doctrine\ORM\Configuration,
 Doctrine\ORM\EntityManager,
-Doctrine\Common\Cache\ArrayCache,
-Doctrine\DBAL\Logging\EchoSQLLogger;
+Doctrine\Common\Cache\ArrayCache;
 /**
 *
 * How to create advanced configurations
@@ -43,9 +42,7 @@ class Doctrine {
     $config->setProxyDir(APPPATH.'/models/proxies');
     $config->setProxyNamespace('Proxies');
 
-    // Set up logger
-    $logger = new EchoSQLLogger;
-    $config->setSQLLogger($logger);
+
 
     $config->setAutoGenerateProxyClasses( TRUE );
 

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace models\Entities;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -47,4 +46,86 @@ class Questions
     private $subCategory;
 
 
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Questions
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set options
+     *
+     * @param string $options
+     *
+     * @return Questions
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
+    }
+
+    /**
+     * Get options
+     *
+     * @return string
+     */
+    public function getOptions()
+    {
+        return $this->options;
+    }
+
+    /**
+     * Set subCategory
+     *
+     * @param \SubCategories $subCategory
+     *
+     * @return Questions
+     */
+    public function setSubCategory(\SubCategories $subCategory = null)
+    {
+        $this->subCategory = $subCategory;
+
+        return $this;
+    }
+
+    /**
+     * Get subCategory
+     *
+     * @return \SubCategories
+     */
+    public function getSubCategory()
+    {
+        return $this->subCategory;
+    }
 }
