@@ -1,11 +1,13 @@
 {
-	"description" : "The CodeIgniter framework",
-	"name" : "codeigniter/framework",
-	"license": "MIT",
-	"require": {
-		"php": ">=5.2.4"
-	},
-	"require-dev": {
-		"mikey179/vfsStream": "1.1.*"
-	}
+    "name": "bushidocode/skills-matrix",
+    "description": "Based on the Survey Framework",
+    "require": {
+        "doctrine/orm": "~2.5"
+    },
+    "authors": [
+        {
+            "name": "Rufus Mbugua",
+            "email": "mbuguarufus@gmail.com"
+        }
+    ]
 }

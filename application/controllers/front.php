@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Front extends MY_Controller {
+class Front extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -24,8 +24,14 @@ class Front extends MY_Controller {
      $this->load->model('front_model');
    }
 
-   function index_get(){
-     $content = $this->front_model->getContent();
-     $this->response($content);
-   }
+   public function index()
+    {
+        echo "<pre>";
+        // print_r($this->doctrine->em);
+            //the line above Prints the EntityManager created by Doctrine Library
+            //with this line -> $this->em = EntityManager::create($connectionOptions, $config);
+            echo "</pre>";
+
+        // $this->load->view('welcome_message');
+    }
 }
