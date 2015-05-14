@@ -24,8 +24,8 @@ class Results_Log_Model extends MY_Model{
     $batchSize = 5;
     for ($i = 1; $i <= sizeof($newArray)-1; ++$i) {
       $ResultsLog = new ResultsLog();
-      $Questions = $this->em->getRepository('models\Entities\Questions')->findOneBy(array('id'=>$newArray[$i]['question_code']));
-echo '<pre>';var_dump($Questions);die;
+      //       $Questions = $this->em->getRepository('models\Entities\Questions')->findOneBy(array('id'=>$newArray[$i]['question_code']));
+      // echo '<pre>';var_dump($Questions);die;
 
       $ResultsLog->setResponse($newArray[$i]['response']);
       // $ResultsLog->setAssessee(1);

@@ -213,7 +213,7 @@ class SubCategories extends \models\Entities\SubCategories implements \Doctrine\
     /**
      * {@inheritDoc}
      */
-    public function setCategory($category = NULL)
+    public function setCategory(\models\Entities\Categories $category = NULL)
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCategory', array($category));
