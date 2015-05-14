@@ -12,10 +12,10 @@
       <tr ng-repeat="question in questions">
         <td>{{question.subCategory.category.name}}</td>
         <td>{{question.subCategory.name}}</td>
-        <td>{{question.description}}</td>
+        <td >{{question.description}}</td>
         <td>
           <span ng-repeat="choice in question.options | split:' '">
-            <input type="radio" ng-model="results.answer[question.id]" value="{{choice}}" name="{{question.id}}">{{choice}}
+            <input type="radio" ng-model="answers[question.id].response" value="{{choice}}" name="{{question.id}}">{{choice}}
           </span>
         </td>
 
@@ -29,5 +29,4 @@
 
   </table>
   <a href="" class="btn btn-add" ng-click="addAnswers()">Submit Answers</a>
-  {{results}}
 </div>
