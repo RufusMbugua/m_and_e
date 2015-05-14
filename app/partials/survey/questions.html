@@ -1,0 +1,32 @@
+<div class="row">
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Sub Category</th>
+        <th>Question</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="question in questions">
+        <td>{{question.subCategory.category.name}}</td>
+        <td>{{question.subCategory.name}}</td>
+        <td >{{question.description}}</td>
+        <td>
+          <span ng-repeat="choice in question.options | split:' '">
+            <input type="radio" ng-model="answers[question.id].response" value="{{choice}}" name="{{question.id}}">{{choice}}
+          </span>
+        </td>
+
+
+      </tr>
+    </tbody>
+    <tfooter>
+
+
+    </tfooter>
+
+  </table>
+  <a href="" class="btn btn-add" ng-click="addAnswers()">Submit Answers</a>
+</div>
