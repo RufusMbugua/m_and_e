@@ -38,3 +38,5 @@ node_modules
 
 ## Bower Ignores
 bower_components
+
+/vendor/
